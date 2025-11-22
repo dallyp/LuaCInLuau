@@ -412,7 +412,7 @@ function LuaC_VM:run(scriptString)
 		end
 
 		-- Print stack state after execution
-		self:printStack()
+		-- self:printStack()
 	end
 end
 
