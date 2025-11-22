@@ -365,7 +365,7 @@ function LuaC_VM:run(scriptString)
 		local op, arg = line:match("^(%S+)%s*(.*)$")
 		if arg == "" then arg = nil end
 
-		print("\n-- PC: " .. self.pc .. " | EXECUTING: " .. line .. " --")
+		-- print("\n-- PC: " .. self.pc .. " | EXECUTING: " .. line .. " --")
 
 		-- Handle control flow
 		if op == "jump" then
