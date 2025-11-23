@@ -116,17 +116,17 @@ local function update_flags(self, result)
 end
 
 function LuaC_VM:printState()
-	print("\n--- VM STATE ---")
-	print(string.format("PC: %d, SP: %d, EBP: %d", self.pc, self.sp, self.registers.EBP or 0))
-	print("Registers:")
+	--print("\n--- VM STATE ---")
+	--print(string.format("PC: %d, SP: %d, EBP: %d", self.pc, self.sp, self.registers.EBP or 0))
+	--print("Registers:")
     for k, v in pairs(self.registers) do
-        print(string.format("  %s: %s (%s)", k, tostring(v), type(v)))
+        --print(string.format("  %s: %s (%s)", k, tostring(v), type(v)))
     end
-    print("Flags:")
-    print(string.format("  ZF: %s, SF: %s, EQ: %s, LT: %s", self.flags.ZF, self.flags.SF, self.flags.EQ, self.flags.LT))
-	print("Stack:")
+    --print("Flags:")
+    --print(string.format("  ZF: %s, SF: %s, EQ: %s, LT: %s", self.flags.ZF, self.flags.SF, self.flags.EQ, self.flags.LT))
+	--print("Stack:")
 	if self.sp == 0 then
-		print("  [Empty]")
+		--print("  [Empty]")
 		return
 	end
     
@@ -134,9 +134,9 @@ function LuaC_VM:printState()
 		local val = self.stack[i]
 		local typeStr = type(val)
 		local displayStr = tostring(val)
-		print(string.format("  [%d / SP%+d]: %s (%s)", i, i - self.sp, displayStr, typeStr))
+		--print(string.format("  [%d / SP%+d]: %s (%s)", i, i - self.sp, displayStr, typeStr))
 	end
-    print("----------------")
+    --print("----------------")
 end
 
 --- Execution Core ---
